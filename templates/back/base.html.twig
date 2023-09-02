@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block nav %}
+    <li class="nav-item">
+        <a class="nav-link {% block armeActive %}{% endblock %}" href="{{ path('app_back_arme') }}">Armes</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% block bossActive %}{% endblock %}" href="{{ path('app_back_boss') }}">Boss</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% block itemActive %}{% endblock %}" href="{{ path('app_back_item')}}">Items</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% block personnageActive %}{% endblock %}" href="{{ path('app_back_personnage') }}">Personnages</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% block typeActive %}{% endblock %}" href="{{ path('app_back_type')}}">Types</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% block userActive %}{% endblock %} border-start ms-2" href="#">Users</a>
+    </li>
+{% endblock %}
+{% block navCss %} bg-warning {% endblock %}
+{% block body %}
+{% block subBody %}{% endblock %}
+{% endblock %}
+
+

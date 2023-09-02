@@ -21,7 +21,7 @@ services:
     ports:
       - "9001:9001"
     volumes:
-      - ".:/product/genshin/www"
+      - ".:/product/genshin/www:rw"
     networks:
       - genshin
 
@@ -33,7 +33,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ".:/product/genshin/www"
+      - ".:/product/genshin/www:rw"
     networks:
       - genshin
 

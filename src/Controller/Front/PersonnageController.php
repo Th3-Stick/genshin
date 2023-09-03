@@ -15,7 +15,13 @@ class PersonnageController extends AbstractController
     public function index(): Response
     {
         return $this->render('front/personnage/index.html.twig', [
-            'controller_name' => 'PersonnageController',
+        ]);
+    }
+
+    #[Route('/name', name: 'app_front_personnage_details')]
+    public function show(): Response
+    {
+        return $this->render('front/personnage/show.html.twig', [
         ]);
     }
 }

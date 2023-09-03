@@ -14,7 +14,13 @@ class BossController extends AbstractController
     public function index(): Response
     {
         return $this->render('front/boss/index.html.twig', [
-            'controller_name' => 'BossController',
+        ]);
+    }
+
+    #[Route('/name', name: 'app_front_boss_details')]
+    public function show(): Response
+    {
+        return $this->render('front/boss/show.html.twig', [
         ]);
     }
 }

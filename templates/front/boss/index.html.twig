@@ -1,20 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello BossController!{% endblock %}
+{% block title %}Show all Boss{% endblock %}
 {% block bossActive %}active{% endblock %}
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<div class="container my-5">
+    <h1>Boss hébdomadaires</h1>
+</div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<div class="container">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/product/genshin/www/src/Controller/Front/BossController.php'|file_link(0) }}">src/Controller/Front/BossController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/product/genshin/www/templates/front/boss/index.html.twig'|file_link(0) }}">templates/front/boss/index.html.twig</a></code></li>
-    </ul>
+    <div class="d-flex flex-wrap justify-content-evenly">
+    {% for i in 1..8 %}
+
+        <div class="card mb-2" style="width: 18rem;">
+            <img src="https://picsum.photos/id/2{{ i }}/300/200" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <h5 class="card-title">Boss n°{{ i }}</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="#" class="btn btn-success">Marquer comme fait</a></li>
+                    <li class="list-group-item"><a href="#" class="btn btn-danger">Marquer comme non-fait</a></li>
+                    <li class="list-group-item"><a href="{{path ('app_front_boss_details') }}" class="btn btn-primary">Fiche Boss</a></li>
+            </div>
+        </div>
+
+    {% endfor %}
+    </div>
 </div>
 {% endblock %}

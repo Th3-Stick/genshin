@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails personnage{% endblock %}
+{% block personnageActive %}active{% endblock %}
+{% block body %}
+
+<div class="container my-5">
+    <h1>Personnage->getname()</h1>
+</div>
+
+<div class="container">
+
+    <div class="card mb-3 mx-auto" style="">
+        <div class="row g-0">
+            <div class="col-lg-4 my-auto">
+                <img src="https://picsum.photos/500/1000" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-lg-8">
+                <div class="card-body pb-0">
+                    <h5 class="card-title text-decoration-underline">Informations</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Type => </li>
+                        <li class="list-group-item">Arme => </li>
+                        <li class="list-group-item">Etoiles => </li>
+                    </ul>
+                    <h5 class="card-title mt-2 text-decoration-underline">Materiaux d'élévation : personnage</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Petites pierres</li>
+                        <li class="list-group-item">Normale pierres</li>
+                        <li class="list-group-item">Moyenne pierres</li>
+                        <li class="list-group-item">Grandes pierres</li>                        
+                        <li class="list-group-item">Matériel de boss du monde</li>
+                        <li class="list-group-item">Ressource</li>
+                        <li class="list-group-item">Matériel bronze</li>
+                        <li class="list-group-item">Matériel argent</li>
+                        <li class="list-group-item">Matériel or</li>                    </ul>
+                    <h5 class="card-title mt-2 text-decoration-underline">Materiaux d'élévation : capacités</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Livre bronze</li>
+                        <li class="list-group-item">Livre argent</li>
+                        <li class="list-group-item">livre or</li>
+                        <li class="list-group-item">Boss associé</li>
+                        <li class="list-group-item">Item associé</li>
+                    </ul> 
+                </div>
+                <div class="d-flex justify-content-end pe-4">
+                    <a href="{{path ('app_front_personnage') }}" class="btn btn-warning">Retour</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
